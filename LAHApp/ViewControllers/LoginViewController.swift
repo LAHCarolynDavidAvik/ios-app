@@ -29,9 +29,15 @@ class LoginViewController: UIViewController {
 	
 	
 	@IBAction func loginPressed(_ sender: Any) {
-		// segue to dashboard
+		// get request
+		// query parameters: password & username
+		
+		// response: entire JSON object with user information
+		
+		
+		
 	}
-    
+	
 
     /*
     // MARK: - Navigation
