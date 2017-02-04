@@ -14,10 +14,16 @@
 		820A4D191E467BDF002105D4 /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820A4D181E467BDF002105D4 /* FriendViewController.swift */; };
 		820A4D1C1E467F3E002105D4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820A4D1B1E467F3E002105D4 /* User.swift */; };
 		820A4D1E1E468166002105D4 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820A4D1D1E468166002105D4 /* Transaction.swift */; };
+		824FEA5D1E46945D00A58809 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 824FEA5C1E46945D00A58809 /* Dashboard.storyboard */; };
+		824FEA631E4694A000A58809 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 824FEA621E4694A000A58809 /* Login.storyboard */; };
+		824FEA651E4694AF00A58809 /* FriendsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 824FEA641E4694AF00A58809 /* FriendsList.storyboard */; };
+		824FEA671E4694BE00A58809 /* Friend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 824FEA661E4694BE00A58809 /* Friend.storyboard */; };
 		82BE39521E466B17006C8A5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BE39511E466B17006C8A5F /* AppDelegate.swift */; };
 		82BE39571E466B17006C8A5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82BE39551E466B17006C8A5F /* Main.storyboard */; };
 		82BE39591E466B17006C8A5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82BE39581E466B17006C8A5F /* Assets.xcassets */; };
 		82BE395C1E466B17006C8A5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82BE395A1E466B17006C8A5F /* LaunchScreen.storyboard */; };
+		82C5EDFF1E46969200A8EF07 /* AddEntry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C5EDFE1E46969200A8EF07 /* AddEntry.storyboard */; };
+		82C5EE011E4696A200A8EF07 /* AddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C5EE001E4696A200A8EF07 /* AddEntryViewController.swift */; };
 		BE93E1FF0490BB1454D1DCA8 /* Pods_LAHApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220DFCF2301AB78F4927AF74 /* Pods_LAHApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,12 +38,18 @@
 		820A4D181E467BDF002105D4 /* FriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendViewController.swift; path = ViewControllers/FriendViewController.swift; sourceTree = "<group>"; };
 		820A4D1B1E467F3E002105D4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		820A4D1D1E468166002105D4 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		824FEA5C1E46945D00A58809 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Dashboard.storyboard; path = ViewControllers/Dashboard.storyboard; sourceTree = "<group>"; };
+		824FEA621E4694A000A58809 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = ViewControllers/Login.storyboard; sourceTree = "<group>"; };
+		824FEA641E4694AF00A58809 /* FriendsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FriendsList.storyboard; path = ViewControllers/FriendsList.storyboard; sourceTree = "<group>"; };
+		824FEA661E4694BE00A58809 /* Friend.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Friend.storyboard; path = ViewControllers/Friend.storyboard; sourceTree = "<group>"; };
 		82BE394E1E466B17006C8A5F /* LAHApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LAHApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82BE39511E466B17006C8A5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82BE39561E466B17006C8A5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		82BE39581E466B17006C8A5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82BE395B1E466B17006C8A5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82BE395D1E466B17006C8A5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82C5EDFE1E46969200A8EF07 /* AddEntry.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AddEntry.storyboard; path = ViewControllers/AddEntry.storyboard; sourceTree = "<group>"; };
+		82C5EE001E4696A200A8EF07 /* AddEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddEntryViewController.swift; path = ViewControllers/AddEntryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +88,12 @@
 				820A4D0E1E466F70002105D4 /* LoginViewController.swift */,
 				820A4D101E46758A002105D4 /* FriendsListTableViewController.swift */,
 				820A4D181E467BDF002105D4 /* FriendViewController.swift */,
+				824FEA5C1E46945D00A58809 /* Dashboard.storyboard */,
+				824FEA621E4694A000A58809 /* Login.storyboard */,
+				824FEA641E4694AF00A58809 /* FriendsList.storyboard */,
+				824FEA661E4694BE00A58809 /* Friend.storyboard */,
+				82C5EDFE1E46969200A8EF07 /* AddEntry.storyboard */,
+				82C5EE001E4696A200A8EF07 /* AddEntryViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -196,7 +214,12 @@
 			files = (
 				82BE395C1E466B17006C8A5F /* LaunchScreen.storyboard in Resources */,
 				82BE39591E466B17006C8A5F /* Assets.xcassets in Resources */,
+				824FEA651E4694AF00A58809 /* FriendsList.storyboard in Resources */,
+				824FEA671E4694BE00A58809 /* Friend.storyboard in Resources */,
 				82BE39571E466B17006C8A5F /* Main.storyboard in Resources */,
+				82C5EDFF1E46969200A8EF07 /* AddEntry.storyboard in Resources */,
+				824FEA631E4694A000A58809 /* Login.storyboard in Resources */,
+				824FEA5D1E46945D00A58809 /* Dashboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +284,7 @@
 				820A4D111E46758A002105D4 /* FriendsListTableViewController.swift in Sources */,
 				820A4D171E467724002105D4 /* FriendTableViewCell.swift in Sources */,
 				82BE39521E466B17006C8A5F /* AppDelegate.swift in Sources */,
+				82C5EE011E4696A200A8EF07 /* AddEntryViewController.swift in Sources */,
 				820A4D0D1E466DD9002105D4 /* DashboardViewController.swift in Sources */,
 				820A4D1C1E467F3E002105D4 /* User.swift in Sources */,
 			);

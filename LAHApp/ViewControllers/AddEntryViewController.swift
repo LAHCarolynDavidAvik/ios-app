@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  AddEntryViewController.swift
 //  LAHApp
 //
 //  Created by Carolyn DUan on 2/4/17.
@@ -8,14 +8,8 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
-	
-	
-	@IBOutlet weak var usernameTextField: UITextField!
-	@IBOutlet weak var passTextField: UITextField!
-	
-	@IBOutlet weak var loginButton: UIButton!
-	
+class AddEntryViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,11 +20,6 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-	
-	
-	@IBAction func loginPressed(_ sender: Any) {
-		// segue to dashboard
-	}
     
 
     /*
