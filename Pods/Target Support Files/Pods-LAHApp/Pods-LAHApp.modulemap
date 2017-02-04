@@ -1,6 +1,0 @@
-framework module Pods_LAHApp {
-  umbrella header "Pods-LAHApp-umbrella.h"
-
-  export *
-  module * { export * }
-}
