@@ -227,24 +227,6 @@ class DetailViewTableViewController: UITableViewController {
 		return tableView.dequeueReusableCell(withIdentifier: self.cellIdentifiers[indexPath.row], for: indexPath)
 		// TODO: fix lmfao (
     }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.row {
-        case 0:
-            return 30;
-        case 1: // name - david sun
-            return 50;
-        case 2: // money - 20.00
-            return 30;
-        case 3: // date
-            return 30;
-        case 4: // purpose
-            return 50;
-
-        default:
-            return 50;
-        }
-    }
 
     /*
     // MARK: - Navigation
