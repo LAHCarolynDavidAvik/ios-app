@@ -18,7 +18,7 @@ struct User {
 	let createdAt: Date // will be sent as a number, turn it into date
 	// if currently logged in user, show all transactions; else, only transactions with other user
 	var transactions: [Transaction] = []
-	var friends: [User]?
+	var friends: [User] = []
 	
 	// let imgUrl: String? // mayb later
 	
@@ -31,10 +31,15 @@ struct User {
 		let createdAtSeconds = json["createdAt"].intValue/1000 //number of milliseconds
 		self.createdAt = Date(timeIntervalSince1970: TimeInterval(createdAtSeconds))
 		
-		let transactionsArray = json["trasnactions"].arrayValue
+		let transactionsArray = json["transactions"].arrayValue
 		
 		for json in transactionsArray {
 			self.transactions.append(Transaction(json: json))
+		}
+		
+		let friendsArray = json["friends"].arrayValue
+		for json in friendsArray {
+			self.friends.append(User(json: json))
 		}
 	}
 }

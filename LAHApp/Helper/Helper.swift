@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import Alamofire
+import SwiftyJSON
 
 
 class Helper {
-	static func fetchCurrentUser() { // should return user
-		
-	}
+//	static func fetchCurrentUser() -> User { // should return user
+//		// user default shit 
+//	}
 }
