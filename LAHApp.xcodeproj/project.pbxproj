@@ -24,6 +24,9 @@
 		82BE395C1E466B17006C8A5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82BE395A1E466B17006C8A5F /* LaunchScreen.storyboard */; };
 		82C5EDFF1E46969200A8EF07 /* AddEntry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C5EDFE1E46969200A8EF07 /* AddEntry.storyboard */; };
 		82C5EE011E4696A200A8EF07 /* AddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C5EE001E4696A200A8EF07 /* AddEntryViewController.swift */; };
+		82C5EE0A1E46D1D500A8EF07 /* AddFriend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C5EE091E46D1D500A8EF07 /* AddFriend.storyboard */; };
+		82C5EE0C1E46D1EF00A8EF07 /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C5EE0B1E46D1EF00A8EF07 /* AddFriendViewController.swift */; };
+		82C5EE0F1E46D48000A8EF07 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C5EE0E1E46D48000A8EF07 /* Helper.swift */; };
 		BE93E1FF0490BB1454D1DCA8 /* Pods_LAHApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220DFCF2301AB78F4927AF74 /* Pods_LAHApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +53,9 @@
 		82BE395D1E466B17006C8A5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82C5EDFE1E46969200A8EF07 /* AddEntry.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AddEntry.storyboard; path = ViewControllers/AddEntry.storyboard; sourceTree = "<group>"; };
 		82C5EE001E4696A200A8EF07 /* AddEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddEntryViewController.swift; path = ViewControllers/AddEntryViewController.swift; sourceTree = "<group>"; };
+		82C5EE091E46D1D500A8EF07 /* AddFriend.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AddFriend.storyboard; path = ViewControllers/AddFriend.storyboard; sourceTree = "<group>"; };
+		82C5EE0B1E46D1EF00A8EF07 /* AddFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddFriendViewController.swift; path = ViewControllers/AddFriendViewController.swift; sourceTree = "<group>"; };
+		82C5EE0E1E46D48000A8EF07 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,8 @@
 				824FEA661E4694BE00A58809 /* Friend.storyboard */,
 				82C5EDFE1E46969200A8EF07 /* AddEntry.storyboard */,
 				82C5EE001E4696A200A8EF07 /* AddEntryViewController.swift */,
+				82C5EE091E46D1D500A8EF07 /* AddFriend.storyboard */,
+				82C5EE0B1E46D1EF00A8EF07 /* AddFriendViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -136,6 +144,7 @@
 		82BE39501E466B17006C8A5F /* LAHApp */ = {
 			isa = PBXGroup;
 			children = (
+				82C5EE0D1E46D47800A8EF07 /* Helper */,
 				820A4D1A1E467F37002105D4 /* Models */,
 				820A4D151E467705002105D4 /* Views */,
 				820A4D0B1E466DBD002105D4 /* ViewControllers */,
@@ -146,6 +155,14 @@
 				82BE395D1E466B17006C8A5F /* Info.plist */,
 			);
 			path = LAHApp;
+			sourceTree = "<group>";
+		};
+		82C5EE0D1E46D47800A8EF07 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				82C5EE0E1E46D48000A8EF07 /* Helper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82BE395C1E466B17006C8A5F /* LaunchScreen.storyboard in Resources */,
+				82C5EE0A1E46D1D500A8EF07 /* AddFriend.storyboard in Resources */,
 				82BE39591E466B17006C8A5F /* Assets.xcassets in Resources */,
 				824FEA651E4694AF00A58809 /* FriendsList.storyboard in Resources */,
 				824FEA671E4694BE00A58809 /* Friend.storyboard in Resources */,
@@ -278,8 +296,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82C5EE0F1E46D48000A8EF07 /* Helper.swift in Sources */,
 				820A4D191E467BDF002105D4 /* FriendViewController.swift in Sources */,
 				820A4D0F1E466F70002105D4 /* LoginViewController.swift in Sources */,
+				82C5EE0C1E46D1EF00A8EF07 /* AddFriendViewController.swift in Sources */,
 				820A4D1E1E468166002105D4 /* Transaction.swift in Sources */,
 				820A4D111E46758A002105D4 /* FriendsListTableViewController.swift in Sources */,
 				820A4D171E467724002105D4 /* FriendTableViewCell.swift in Sources */,

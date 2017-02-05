@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Alamofire
 
 class LoginViewController: UIViewController {
-	
 	
 	@IBOutlet weak var usernameTextField: UITextField!
 	@IBOutlet weak var passTextField: UITextField!
@@ -29,13 +30,39 @@ class LoginViewController: UIViewController {
 	
 	
 	@IBAction func loginPressed(_ sender: Any) {
-		// get request
-		// query parameters: password & username
+		performRequest();
+		let sb = UIStoryboard(name: "Dashboard", bundle: nil)
+		let vc = sb.instantiateInitialViewController() as! DashboardViewController
+		self.present(vc, animated: true, completion: nil)
+	}
+	
+	private func performRequest() {
+//		let username = self.usernameTextField.text
+//		let pw = self.passTextField.text
 		
-		// response: entire JSON object with user information
+		let username = "duancaro"
+		let password = "i<3avik"
 		
+		let params: Parameters = [
+			"username": username,
+			"password": password
+		]
 		
+		let url = "http://losaltoshacks-avikj.rhcloud.com/login"
 		
+		Alamofire.request(url, parameters: params).validate().responseJSON { response in
+			switch response.result {
+			case .success:
+				if let value = response.result.value {
+					let json = JSON(value)
+					let user = User(json: json)
+					// TODO: store user in defaults..
+				}
+			case .failure(let error):
+				print("o no error")
+				print(error)
+			}
+		}
 	}
 	
 
