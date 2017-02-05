@@ -13,7 +13,7 @@ import SwiftyJSON
 class AddDebt: UITableViewController {
 
 	// this depends on the "status".
-	var cellIdentifiers: [String] = ["ABobTableViewCell", "ANameTableViewCell", "AMoneyTableViewCell", "ADateTableViewCell", "APurposeTableViewCell", "confirm"]
+	var cellIdentifiers: [String] = ["ABobTableViewCell", "ANameTableViewCell", "AMoneyTableViewCell", "ADateTableViewCell", "APurposeTableViewCell", "confirm", "CloseCell"]
 	
 	var currentUser: User?
 	
@@ -29,13 +29,21 @@ class AddDebt: UITableViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		print("uhhhhh")
+        let nav = self.navigationController?.navigationBar
+        nav?.barStyle = UIBarStyle.black
+        nav?.tintColor = UIColor.white
+        self.view.backgroundColor = Color.Background;
+        self.view.tintColor = Color.White;
 		self.tableView.separatorStyle = .none
 		Helper.fetchDummyUser { (user) in
 			self.currentUser = user
 		}
 	}
 	
+    func handleTap() {
+        
+    }
+    
 	 @IBAction func confirmPressed(_ sender: Any) {
 		let deadline = findDeadline()
 		

@@ -1,5 +1,5 @@
 //
-//  APurposeTableViewCell.swift
+//  ANameTableViewCell.swift
 //  LAHApp
 //
 //  Created by Carolyn DUan on 2/5/17.
@@ -8,17 +8,11 @@
 
 import UIKit
 
-class APurposeTableViewCell: UITableViewCell, UITextViewDelegate {
-	
-	@IBOutlet weak var purposeTextView: UITextView!
-	weak var tablevc: AddDebt?
-	
+class CloseTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-		self.purposeTextView.delegate = self
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         self.backgroundColor = UIColor.clear;
@@ -27,9 +21,5 @@ class APurposeTableViewCell: UITableViewCell, UITextViewDelegate {
         self.selectedBackgroundView = myBackView;
         // Configure the view for the selected state
     }
-	
-	func textViewDidChange(_ textView: UITextView) {
-		self.tablevc?.purpose = textView.text
-	}
-
+    
 }

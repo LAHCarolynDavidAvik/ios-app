@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		557C503C1E4757CC00B020BF /* defaultTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557C503B1E4757CC00B020BF /* defaultTextField.swift */; };
+		557C503E1E4759F900B020BF /* AConfirmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557C503D1E4759F900B020BF /* AConfirmTableViewCell.swift */; };
+		557C50401E4764D500B020BF /* CloseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557C503F1E4764D500B020BF /* CloseTableViewCell.swift */; };
 		5582C8EC1E472E9200D671E9 /* PrimaryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582C8EA1E472E9200D671E9 /* PrimaryLabel.swift */; };
 		5582C8ED1E472E9200D671E9 /* UIDefaultLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582C8EB1E472E9200D671E9 /* UIDefaultLabel.swift */; };
 		5582C8F11E472E9D00D671E9 /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582C8EE1E472E9D00D671E9 /* DashboardTableViewCell.swift */; };
@@ -55,6 +58,9 @@
 		550EDBCD1E473D4D002DF3EB /* ADateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ADateTableViewCell.swift; path = LAHApp/Views/Cells/ADateTableViewCell.swift; sourceTree = "<group>"; };
 		550EDBCE1E473DA4002DF3EB /* DetailView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = DetailView.storyboard; path = LAHApp/Views/DebtDetailView/DetailView.storyboard; sourceTree = "<group>"; };
 		550EDBCF1E473DD0002DF3EB /* AddDebt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = AddDebt.storyboard; path = LAHApp/Views/AddDebt/AddDebt.storyboard; sourceTree = "<group>"; };
+		557C503B1E4757CC00B020BF /* defaultTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = defaultTextField.swift; sourceTree = "<group>"; };
+		557C503D1E4759F900B020BF /* AConfirmTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AConfirmTableViewCell.swift; sourceTree = "<group>"; };
+		557C503F1E4764D500B020BF /* CloseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseTableViewCell.swift; sourceTree = "<group>"; };
 		5582C8EA1E472E9200D671E9 /* PrimaryLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryLabel.swift; sourceTree = "<group>"; };
 		5582C8EB1E472E9200D671E9 /* UIDefaultLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDefaultLabel.swift; sourceTree = "<group>"; };
 		5582C8EE1E472E9D00D671E9 /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
@@ -159,6 +165,8 @@
 				55DC42771E473B0F000CFC52 /* MoneyTableViewCell.swift */,
 				55DC42781E473B0F000CFC52 /* NameTableViewCell.swift */,
 				55DC42791E473B0F000CFC52 /* PurposeTableViewCell.swift */,
+				557C503D1E4759F900B020BF /* AConfirmTableViewCell.swift */,
+				557C503F1E4764D500B020BF /* CloseTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -202,6 +210,7 @@
 				5582C8EA1E472E9200D671E9 /* PrimaryLabel.swift */,
 				5582C8EB1E472E9200D671E9 /* UIDefaultLabel.swift */,
 				820A4D161E467724002105D4 /* FriendTableViewCell.swift */,
+				557C503B1E4757CC00B020BF /* defaultTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -395,15 +404,18 @@
 			files = (
 				55DC427D1E473B0F000CFC52 /* ADateTableViewCell.swift in Sources */,
 				55DC427C1E473B0F000CFC52 /* ABobTableViewCell.swift in Sources */,
+				557C503E1E4759F900B020BF /* AConfirmTableViewCell.swift in Sources */,
 				82C5EE0F1E46D48000A8EF07 /* Helper.swift in Sources */,
 				55DC427F1E473B0F000CFC52 /* ANameTableViewCell.swift in Sources */,
 				820A4D191E467BDF002105D4 /* FriendViewController.swift in Sources */,
 				55DC42811E473B0F000CFC52 /* BobTableViewCell.swift in Sources */,
+				557C503C1E4757CC00B020BF /* defaultTextField.swift in Sources */,
 				55DC42821E473B0F000CFC52 /* DateTableViewCell.swift in Sources */,
 				820A4D0F1E466F70002105D4 /* LoginViewController.swift in Sources */,
 				55DC427B1E473B0F000CFC52 /* AddDebt.swift in Sources */,
 				5582C8ED1E472E9200D671E9 /* UIDefaultLabel.swift in Sources */,
 				55DC427E1E473B0F000CFC52 /* AMoneyTableViewCell.swift in Sources */,
+				557C50401E4764D500B020BF /* CloseTableViewCell.swift in Sources */,
 				55DC42801E473B0F000CFC52 /* APurposeTableViewCell.swift in Sources */,
 				820A4D1E1E468166002105D4 /* Transaction.swift in Sources */,
 				820A4D111E46758A002105D4 /* FriendsListTableViewController.swift in Sources */,

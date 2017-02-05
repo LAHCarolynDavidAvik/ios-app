@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -164,6 +165,28 @@
                                     <outlet property="purposeLabel" destination="yp3-8H-zrP" id="wzd-BV-f3R"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CloseCell" id="Lb4-0t-F3T" customClass="CloseTableViewCell" customModule="LAHApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="567" width="375" height="67"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lb4-0t-F3T" id="nao-Ne-OdP">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Close" translatesAutoresizingMaskIntoConstraints="NO" id="940-Jd-w1G">
+                                            <rect key="frame" x="167" y="13" width="40" height="40"/>
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="vT0-Z2-lxV"/>
+                                                <constraint firstAttribute="height" constant="40" id="zcH-D3-Boa"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="940-Jd-w1G" firstAttribute="centerX" secondItem="nao-Ne-OdP" secondAttribute="centerX" id="aEL-fi-E5A"/>
+                                        <constraint firstItem="940-Jd-w1G" firstAttribute="centerY" secondItem="nao-Ne-OdP" secondAttribute="centerY" id="kB0-Es-wB1"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                         </prototypes>
                         <sections/>
                         <connections>
@@ -185,6 +208,7 @@
         <!--Navigation Controller-->
         <scene sceneID="xYq-R2-ySS">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7a0-VO-EBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jvH-DI-kQQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4nM-ti-0zv">
@@ -196,9 +220,11 @@
                         <segue destination="BSk-iz-I0x" kind="relationship" relationship="rootViewController" id="jCs-nF-HLy"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7a0-VO-EBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-146.40000000000001" y="-113.79310344827587"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Close" width="48" height="48"/>
+    </resources>
 </document>
