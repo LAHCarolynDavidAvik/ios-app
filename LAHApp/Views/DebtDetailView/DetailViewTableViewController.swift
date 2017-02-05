@@ -172,7 +172,7 @@ class DetailViewTableViewController: UITableViewController {
 		let centR = cents%100
 		let centString = (centR < 10) ? "0\(centR)" : "\(centR)"
 		let dollars = cents/100
-		return "$\(dollars).\(centString)"
+		return "$\(dollars*10).\(centString)"
 	}
 
     // MARK: - Table view data source

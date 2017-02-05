@@ -29,7 +29,6 @@ struct Transaction {
 		self.lender = lenderUsername
 		self.debtor = debtorUsername
 		
-		
 		self.cents = json["quantity"].intValue
 		
 		self.description = json["description"].stringValue
