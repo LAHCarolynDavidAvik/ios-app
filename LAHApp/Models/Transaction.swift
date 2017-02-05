@@ -8,24 +8,30 @@
 
 import Foundation
 import SwiftyJSON
+import Alamofire
 
 struct Transaction {
 	
-	let lender: User? // will be given as a string
-	let debtor: User? // ''
-	let quantity: Int // number of cents
+	var lender: String // will be given as a string
+	var debtor: String // ''
+	let cents: Int // number of cents
 	let description: String
 	let createdAt: Date
 	let deadline: Date // will be int - num of milliseconds or whatever
 	let interest: Double
+	let id: String
+	let status: Status
+	let datePaid: Date?
 	
 	init(json: JSON) {
 		let lenderUsername = json["lender"].stringValue
 		let debtorUsername = json["debtor"].stringValue
+		self.lender = lenderUsername
+		self.debtor = debtorUsername
 		
-		// TODO: wait for avik to do some api shet and then set lender & debtor to the actual users
 		
-		self.quantity = json["quantity"].intValue
+		self.cents = json["quantity"].intValue
+		
 		self.description = json["description"].stringValue
 		
 		let createdAtSecs = json["createdAt"].intValue/1000
@@ -36,10 +42,19 @@ struct Transaction {
 		
 		
 		self.interest = json["interest"].doubleValue
+		self.id = json["id"].stringValue
+		self.status = Status(rawValue: json["status"].intValue)!
 		
-		self.lender = nil
-		self.debtor = nil
-		
+		if json["datePaid"].exists() {
+			let datePaidSecs = json["datePaid"].intValue/1000
+			self.datePaid = Date(timeIntervalSince1970: TimeInterval(datePaidSecs))
+		} else {
+			self.datePaid = nil;
+		}
 	}
 	
+}
+
+enum Status: Int {
+	case Pending = 0, Unpaid, Paid
 }

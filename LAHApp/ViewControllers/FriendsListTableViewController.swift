@@ -10,6 +10,13 @@ import UIKit
 
 class FriendsListTableViewController: UITableViewController {
 	
+	var user: User? {
+		didSet {
+			self.tableView.reloadData()
+			print("reloadedData?")
+		}
+	}
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,24 +41,22 @@ class FriendsListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10 // friends.count
+		guard let user = self.user else { print("this shouldnt print"); return 0 }
+		return user.friends.count
     }
-
 	
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as! FriendTableViewCell
-        // TODO: Configure the cell...
+		guard let u = self.user else {
+			print("this shouldnt print")
+			return cell
+		}
+		
+		let frand = u.friends[indexPath.row]
+		cell.usernameLabel.text = frand.username
+		cell.nameLabel.text = frand.name
+		
         return cell
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

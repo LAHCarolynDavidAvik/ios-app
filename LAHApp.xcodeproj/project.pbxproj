@@ -24,12 +24,29 @@
 		824FEA631E4694A000A58809 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 824FEA621E4694A000A58809 /* Login.storyboard */; };
 		824FEA651E4694AF00A58809 /* FriendsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 824FEA641E4694AF00A58809 /* FriendsList.storyboard */; };
 		824FEA671E4694BE00A58809 /* Friend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 824FEA661E4694BE00A58809 /* Friend.storyboard */; };
+		82680ABD1E471CAF001D481B /* BobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82680ABC1E471CAF001D481B /* BobTableViewCell.swift */; };
+		82680ABF1E471CF4001D481B /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82680ABE1E471CF4001D481B /* NameTableViewCell.swift */; };
+		82680AC11E471D07001D481B /* MoneyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82680AC01E471D07001D481B /* MoneyTableViewCell.swift */; };
+		82680AC31E471D16001D481B /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82680AC21E471D16001D481B /* DateTableViewCell.swift */; };
+		82680AC51E471D24001D481B /* PurposeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82680AC41E471D24001D481B /* PurposeTableViewCell.swift */; };
+		82680AC71E471E88001D481B /* ABobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82680AC61E471E88001D481B /* ABobTableViewCell.swift */; };
+		82680AC91E471E8E001D481B /* ANameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82680AC81E471E8E001D481B /* ANameTableViewCell.swift */; };
+		82680ACB1E471E96001D481B /* AMoneyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82680ACA1E471E96001D481B /* AMoneyTableViewCell.swift */; };
+		82680ACD1E471EA4001D481B /* ADateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82680ACC1E471EA4001D481B /* ADateTableViewCell.swift */; };
+		82680ACF1E471EAB001D481B /* APurposeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82680ACE1E471EAB001D481B /* APurposeTableViewCell.swift */; };
 		82BE39521E466B17006C8A5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BE39511E466B17006C8A5F /* AppDelegate.swift */; };
 		82BE39571E466B17006C8A5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82BE39551E466B17006C8A5F /* Main.storyboard */; };
 		82BE39591E466B17006C8A5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82BE39581E466B17006C8A5F /* Assets.xcassets */; };
 		82BE395C1E466B17006C8A5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82BE395A1E466B17006C8A5F /* LaunchScreen.storyboard */; };
 		82C5EDFF1E46969200A8EF07 /* AddEntry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C5EDFE1E46969200A8EF07 /* AddEntry.storyboard */; };
 		82C5EE011E4696A200A8EF07 /* AddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C5EE001E4696A200A8EF07 /* AddEntryViewController.swift */; };
+		82C5EE0A1E46D1D500A8EF07 /* AddFriend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C5EE091E46D1D500A8EF07 /* AddFriend.storyboard */; };
+		82C5EE0C1E46D1EF00A8EF07 /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C5EE0B1E46D1EF00A8EF07 /* AddFriendViewController.swift */; };
+		82C5EE0F1E46D48000A8EF07 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C5EE0E1E46D48000A8EF07 /* Helper.swift */; };
+		82C5EE131E46EB2600A8EF07 /* DetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C5EE121E46EB2600A8EF07 /* DetailView.storyboard */; };
+		82C5EE151E46EB6300A8EF07 /* DetailViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C5EE141E46EB6300A8EF07 /* DetailViewTableViewController.swift */; };
+		82C5EE1A1E46FF3F00A8EF07 /* AddDebt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C5EE191E46FF3F00A8EF07 /* AddDebt.storyboard */; };
+		82C5EE1C1E47006100A8EF07 /* AddDebt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C5EE1B1E47006100A8EF07 /* AddDebt.swift */; };
 		BE93E1FF0490BB1454D1DCA8 /* Pods_LAHApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220DFCF2301AB78F4927AF74 /* Pods_LAHApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +71,16 @@
 		824FEA621E4694A000A58809 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = ViewControllers/Login.storyboard; sourceTree = "<group>"; };
 		824FEA641E4694AF00A58809 /* FriendsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FriendsList.storyboard; path = ViewControllers/FriendsList.storyboard; sourceTree = "<group>"; };
 		824FEA661E4694BE00A58809 /* Friend.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Friend.storyboard; path = ViewControllers/Friend.storyboard; sourceTree = "<group>"; };
+		82680ABC1E471CAF001D481B /* BobTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BobTableViewCell.swift; sourceTree = "<group>"; };
+		82680ABE1E471CF4001D481B /* NameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
+		82680AC01E471D07001D481B /* MoneyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyTableViewCell.swift; sourceTree = "<group>"; };
+		82680AC21E471D16001D481B /* DateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
+		82680AC41E471D24001D481B /* PurposeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurposeTableViewCell.swift; sourceTree = "<group>"; };
+		82680AC61E471E88001D481B /* ABobTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABobTableViewCell.swift; sourceTree = "<group>"; };
+		82680AC81E471E8E001D481B /* ANameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ANameTableViewCell.swift; sourceTree = "<group>"; };
+		82680ACA1E471E96001D481B /* AMoneyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMoneyTableViewCell.swift; sourceTree = "<group>"; };
+		82680ACC1E471EA4001D481B /* ADateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADateTableViewCell.swift; sourceTree = "<group>"; };
+		82680ACE1E471EAB001D481B /* APurposeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APurposeTableViewCell.swift; sourceTree = "<group>"; };
 		82BE394E1E466B17006C8A5F /* LAHApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LAHApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82BE39511E466B17006C8A5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82BE39561E466B17006C8A5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,6 +89,13 @@
 		82BE395D1E466B17006C8A5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82C5EDFE1E46969200A8EF07 /* AddEntry.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AddEntry.storyboard; path = ViewControllers/AddEntry.storyboard; sourceTree = "<group>"; };
 		82C5EE001E4696A200A8EF07 /* AddEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddEntryViewController.swift; path = ViewControllers/AddEntryViewController.swift; sourceTree = "<group>"; };
+		82C5EE091E46D1D500A8EF07 /* AddFriend.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AddFriend.storyboard; path = ViewControllers/AddFriend.storyboard; sourceTree = "<group>"; };
+		82C5EE0B1E46D1EF00A8EF07 /* AddFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddFriendViewController.swift; path = ViewControllers/AddFriendViewController.swift; sourceTree = "<group>"; };
+		82C5EE0E1E46D48000A8EF07 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		82C5EE121E46EB2600A8EF07 /* DetailView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailView.storyboard; sourceTree = "<group>"; };
+		82C5EE141E46EB6300A8EF07 /* DetailViewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewTableViewController.swift; sourceTree = "<group>"; };
+		82C5EE191E46FF3F00A8EF07 /* AddDebt.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddDebt.storyboard; sourceTree = "<group>"; };
+		82C5EE1B1E47006100A8EF07 /* AddDebt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDebt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +148,8 @@
 				824FEA661E4694BE00A58809 /* Friend.storyboard */,
 				82C5EDFE1E46969200A8EF07 /* AddEntry.storyboard */,
 				82C5EE001E4696A200A8EF07 /* AddEntryViewController.swift */,
+				82C5EE091E46D1D500A8EF07 /* AddFriend.storyboard */,
+				82C5EE0B1E46D1EF00A8EF07 /* AddFriendViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -141,6 +177,23 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		82680ABB1E471CA3001D481B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				82680ABC1E471CAF001D481B /* BobTableViewCell.swift */,
+				82680ABE1E471CF4001D481B /* NameTableViewCell.swift */,
+				82680AC01E471D07001D481B /* MoneyTableViewCell.swift */,
+				82680AC21E471D16001D481B /* DateTableViewCell.swift */,
+				82680AC41E471D24001D481B /* PurposeTableViewCell.swift */,
+				82680AC61E471E88001D481B /* ABobTableViewCell.swift */,
+				82680AC81E471E8E001D481B /* ANameTableViewCell.swift */,
+				82680ACA1E471E96001D481B /* AMoneyTableViewCell.swift */,
+				82680ACC1E471EA4001D481B /* ADateTableViewCell.swift */,
+				82680ACE1E471EAB001D481B /* APurposeTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		82BE39451E466B17006C8A5F = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +215,7 @@
 		82BE39501E466B17006C8A5F /* LAHApp */ = {
 			isa = PBXGroup;
 			children = (
+				82C5EE0D1E46D47800A8EF07 /* Helper */,
 				820A4D1A1E467F37002105D4 /* Models */,
 				820A4D151E467705002105D4 /* Views */,
 				820A4D0B1E466DBD002105D4 /* ViewControllers */,
@@ -172,6 +226,32 @@
 				82BE395D1E466B17006C8A5F /* Info.plist */,
 			);
 			path = LAHApp;
+			sourceTree = "<group>";
+		};
+		82C5EE0D1E46D47800A8EF07 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				82C5EE0E1E46D48000A8EF07 /* Helper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		82C5EE111E46EB1100A8EF07 /* DebtDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				82C5EE121E46EB2600A8EF07 /* DetailView.storyboard */,
+				82C5EE141E46EB6300A8EF07 /* DetailViewTableViewController.swift */,
+			);
+			path = DebtDetailView;
+			sourceTree = "<group>";
+		};
+		82C5EE181E46FF3300A8EF07 /* AddDebt */ = {
+			isa = PBXGroup;
+			children = (
+				82C5EE191E46FF3F00A8EF07 /* AddDebt.storyboard */,
+				82C5EE1B1E47006100A8EF07 /* AddDebt.swift */,
+			);
+			path = AddDebt;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,13 +318,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82C5EE1A1E46FF3F00A8EF07 /* AddDebt.storyboard in Resources */,
 				82BE395C1E466B17006C8A5F /* LaunchScreen.storyboard in Resources */,
+				82C5EE0A1E46D1D500A8EF07 /* AddFriend.storyboard in Resources */,
 				82BE39591E466B17006C8A5F /* Assets.xcassets in Resources */,
 				824FEA651E4694AF00A58809 /* FriendsList.storyboard in Resources */,
 				824FEA671E4694BE00A58809 /* Friend.storyboard in Resources */,
 				82BE39571E466B17006C8A5F /* Main.storyboard in Resources */,
 				82C5EDFF1E46969200A8EF07 /* AddEntry.storyboard in Resources */,
 				824FEA631E4694A000A58809 /* Login.storyboard in Resources */,
+				82C5EE131E46EB2600A8EF07 /* DetailView.storyboard in Resources */,
 				824FEA5D1E46945D00A58809 /* Dashboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,7 +387,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82C5EE0F1E46D48000A8EF07 /* Helper.swift in Sources */,
 				820A4D191E467BDF002105D4 /* FriendViewController.swift in Sources */,
+				82680AC71E471E88001D481B /* ABobTableViewCell.swift in Sources */,
+				82680ACD1E471EA4001D481B /* ADateTableViewCell.swift in Sources */,
+				82680AC31E471D16001D481B /* DateTableViewCell.swift in Sources */,
 				820A4D0F1E466F70002105D4 /* LoginViewController.swift in Sources */,
 				5582C8ED1E472E9200D671E9 /* UIDefaultLabel.swift in Sources */,
 				820A4D1E1E468166002105D4 /* Transaction.swift in Sources */,
