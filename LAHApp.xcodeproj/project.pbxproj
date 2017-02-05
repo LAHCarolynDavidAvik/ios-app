@@ -306,7 +306,7 @@
 				TargetAttributes = {
 					82BE394D1E466B17006C8A5F = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = APHA6W5N27;
+						DevelopmentTeam = 5ABR29YEK9;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -554,7 +554,7 @@
 			baseConfigurationReference = 365A550680ADDB2273FDF3F9 /* Pods-LAHApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = APHA6W5N27;
+				DEVELOPMENT_TEAM = 5ABR29YEK9;
 				INFOPLIST_FILE = LAHApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.duancaro.LAHApp;
@@ -568,7 +568,7 @@
 			baseConfigurationReference = 05D18E5B0126146AC5B59CEB /* Pods-LAHApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = APHA6W5N27;
+				DEVELOPMENT_TEAM = 5ABR29YEK9;
 				INFOPLIST_FILE = LAHApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.duancaro.LAHApp;

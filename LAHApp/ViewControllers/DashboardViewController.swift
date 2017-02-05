@@ -13,8 +13,8 @@ class DashboardViewController: UIViewController,UITableViewDataSource,UITableVie
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var creditScore: PrimaryLabel!
     
-    let categories = ["Debt Owed","Debt Received"];
-    let transactions: [[String]] = [["David Sun","Avik Jain","David Sun","Avik Jain","David Sun","Avik Jain","David Sun","Avik Jain"],["David Sun","Avik Jain","David Sun","Avik Jain","David Sun","Avik Jain","David Sun","Avik Jain"]];
+    let categories = ["You owe...","You lent..."];
+    let transactions: [[String]] = [["Eleanor Roosevelt","Carolyn Duan","David Sun","Nihal George","David Sun","Avik Jain","David Sun","Zoe ZHang"],["David Sun","Avik Jain","Lorienza Fuller","Carolyn Duan","David Sun","Avik Jain","David Sun","George Washington"]];
     let username = "dave4506";
     
 	override func viewDidLoad() {
@@ -35,6 +35,21 @@ class DashboardViewController: UIViewController,UITableViewDataSource,UITableVie
         let titleLabel = PrimaryLabel(frame: CGRect(x: 0, y: 0, width: 60, height: 30));
         titleLabel.text = self.username
         self.navigationItem.titleView = titleLabel;
+	}
+	
+	@IBAction func addButtonPressed(_ sender: Any) {
+		print("fuuuuuuuuuk")
+		let storyboard = UIStoryboard(name: "AddDebt", bundle: nil)
+		let vc = storyboard.instantiateInitialViewController() as! AddDebt
+		self.present(vc, animated: true, completion: nil)
+	}
+	
+	@IBAction func addPressed(_ sender: Any) {
+		print("fuuuuuuuuuk")
+		let storyboard = UIStoryboard(name: "AddDebt", bundle: nil)
+		let vc = storyboard.instantiateInitialViewController() as! UINavigationController
+		
+		self.present(vc, animated: true, completion: nil)
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {

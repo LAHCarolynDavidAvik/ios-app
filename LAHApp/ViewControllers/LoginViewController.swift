@@ -57,10 +57,10 @@ class LoginViewController: UIViewController {
 					print("user successfuly logged in")
 					print(user.name)
 					
-					let sb = UIStoryboard(name: "FriendsList", bundle: nil)
+					let sb = UIStoryboard(name: "Dashboard", bundle: nil)
 					let navVC = sb.instantiateInitialViewController() as! UINavigationController
-					let umVC = navVC.topViewController as! FriendsListTableViewController // TODO: fix, this	should be dashboard
-					umVC.user = user
+					let umVC = navVC.topViewController as! DashboardViewController // TODO: fix, this	should be dashboard
+					// umVC.user = user
 					self.present(navVC, animated: true, completion: nil)
 				}
 			case .failure(let error):
