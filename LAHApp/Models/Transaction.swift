@@ -20,6 +20,7 @@ struct Transaction {
 	let interest: Double
 	let id: String
 	let status: Status
+	let datePaid: Date?
 	
 	init(json: JSON) {
 		let lenderUsername = json["lender"].stringValue
@@ -43,6 +44,14 @@ struct Transaction {
 		self.lender = nil
 		self.debtor = nil // TODO: FIX THIS SHITTY SHIT
 		self.status = Status(rawValue: json["status"].intValue)!
+		
+		
+		if json["datePaid"].exists() {
+			let datePaidSecs = json["datePaid"].intValue/1000
+			self.datePaid = Date(timeIntervalSince1970: TimeInterval(datePaidSecs))
+		} else {
+			self.datePaid = nil;
+		}
 	}
 	
 }

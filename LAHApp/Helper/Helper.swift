@@ -15,4 +15,11 @@ class Helper {
 //	static func fetchCurrentUser() -> User { // should return user
 //		// user default shit 
 //	}
+	
+	class func formatDateWithShortYear(date: Date) -> String {
+		let dateFormatter = DateFormatter()
+		dateFormatter.dateFormat = "M/d/yy"
+		return dateFormatter.string(from: date)
+	}
+	
 }

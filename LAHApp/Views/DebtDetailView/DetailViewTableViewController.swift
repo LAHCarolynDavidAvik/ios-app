@@ -28,6 +28,10 @@ class DetailViewTableViewController: UITableViewController {
 	@IBOutlet weak var dateLabel: UILabel!
 	@IBOutlet weak var purposeLabel: UILabel!
 	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		self.tableView.separatorStyle = .none
+	}
 	
 	private func configureIdentifiers(lender: User, debtor: User) {
 		// if somebody else owes me money.
@@ -36,8 +40,10 @@ class DetailViewTableViewController: UITableViewController {
 			// if unpaid
 			if (status == Status.Unpaid) {
 				self.bobLabel.text = "owes you"
+				self.dateLabel.text = "by \(Helper.formatDateWithShortYear(date: self.transaction.deadline))"
 			} else {
 				self.bobLabel.text = "paid you"
+				self.dateLabel.text = "on \(Helper.formatDateWithShortYear(date: self.transaction.datePaid!))"
 			}
 			self.cellIdentifiers[0] = "name"
 			self.cellIdentifiers[1] = "bob"
@@ -46,19 +52,16 @@ class DetailViewTableViewController: UITableViewController {
 			// i owe somebody else money. don't mess with cellIdentifiers array
 			if (status == Status.Unpaid) {
 				self.bobLabel.text = "you owe"
+				self.dateLabel.text = "by \(Helper.formatDateWithShortYear(date: self.transaction.deadline))"
 			} else {
 				self.bobLabel.text = "you paid"
+				self.dateLabel.text = "on \(Helper.formatDateWithShortYear(date: self.transaction.datePaid!))"
 			}
 		}
 		
 		self.nameLabel.text = lender.name
 		self.moneyLabel.text = convertToDollars(cents: self.transaction.cents)
-		self.dateLabel.text = "by \(formatDate(date:self.transaction.deadline))"
 		self.purposeLabel.text = self.transaction.description
-	}
-	
-	private func formatDate(date: Date) -> String {
-		return "dummy/date"
 	}
 	
 	private func convertToDollars(cents: Int) -> String{
@@ -67,11 +70,6 @@ class DetailViewTableViewController: UITableViewController {
 		let dollars = cents/100
 		return "$\(dollars).\(centString)"
 	}
-	
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
