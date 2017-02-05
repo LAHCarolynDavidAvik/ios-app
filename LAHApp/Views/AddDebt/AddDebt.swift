@@ -15,33 +15,34 @@ class AddDebt: UITableViewController {
 	// this depends on the "status".
 	var cellIdentifiers: [String] = ["ABobTableViewCell", "ANameTableViewCell", "AMoneyTableViewCell", "ADateTableViewCell", "APurposeTableViewCell", "confirm"]
 	
-	var currentUser: User!
-
-	let username: String = ""
-	var iOweYou: Bool = true // default is true. "you owe DAVID SUN $20"
+	var currentUser: User?
 	
-	var transaction: Transaction! {
-		didSet {
-			// configure cell identifiers and figure out the order and labels and shit.
-		//	configureIdentifiers(lender: transaction.lender!, debtor: transaction.debtor!) // TODO: DON'T NEED TO FORCE UNWRAP
-			self.tableView.reloadData()
-		}
-	}
+	var debtorName: String = ""
+	var money: String = ""
+	// var date: Date? = nil
+	var purpose: String = ""
+	
+	var selectedIndex: Int = 0
+	
+	
+	let username: String = ""
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		//self.tableView.separatorStyle = .none
-		print("hey")
+		print("uhhhhh")
+		self.tableView.separatorStyle = .none
+		Helper.fetchDummyUser { (user) in
+			self.currentUser = user
+		}
 	}
 	
-	/* @IBAction func confirmPressed(_ sender: Any) {
-
+	 @IBAction func confirmPressed(_ sender: Any) {
 		let deadline = findDeadline()
 		
 		// fetch user from username.
 		let getUserUrl = "http://losaltoshacks-avikj.rhcloud.com/login"
 		let userParams: Parameters = [
-			"username": self.nameTextField.text!
+			"username": self.debtorName
 		]
 		
 		Alamofire.request(getUserUrl, parameters: userParams).validate().responseJSON { response in
@@ -53,25 +54,29 @@ class AddDebt: UITableViewController {
 					
 					// transaction shit
 					let transactionParams: Parameters = [
-						"lender": self.currentUser,
-						"debtor": debtor,
-						"quantity": self.convertToCents(money: self.moneyTextField.text!),
-						"description": self.descTextFIeld.text,
-						"deadline": deadline,
+						"lender": self.currentUser!.username,
+						"debtor": debtor.username,
+						"quantity": self.money, // TODO: this is wrong.
+						"description": self.purpose,
+						"deadline": Int(deadline.timeIntervalSince1970*1000) as! NSNumber,
 					]
 					
 					let transactionUrl = "http://losaltoshacks-avikj.rhcloud.com/add_transaction"
 					
-					Alamofire.request(transactionUrl, method: .post, parameters: transactionParams, encoding: JSONEncoding.default, headers: nil).validate().responseJSON { response in
-						switch response.result {
-							case .success:
-								print("yay transaction created")
-							
-							case .failure(let error):
-								print("o no error")
-								print(error)
-						}
-					}
+					Alamofire.request(transactionUrl, method: .post, parameters: transactionParams).validate()
+//						
+//						.responseJSON { response in
+//						switch response.result {
+//							case .success:
+//								print("yay transaction created")
+//							case .failure(let error):
+//								print("o no error")
+//								print(error)
+//						}
+					
+					
+					// TODO: dismiss view controller somehow...
+					self.dismiss(animated: true, completion: nil)
 				}
 			case .failure(let error):
 				print("o no error")
@@ -79,12 +84,11 @@ class AddDebt: UITableViewController {
 			}
 		}
 		
-	} */
+	}
 	
-	/*
 	private func findDeadline() -> Date {
 		var numAdd = 0;
-		switch self.dateSegmentControl.selectedSegmentIndex {
+		switch self.selectedIndex {
 		case 0:
 			numAdd = 1
 		case 1: // 3 days
@@ -98,7 +102,7 @@ class AddDebt: UITableViewController {
 		}
 		let deadline = Calendar.current.date(byAdding: .day, value: numAdd, to: Date())
 		return deadline!
-	} */
+	}
 	
 	// not sure if its gonna be a string - should be like 20.00 or 20
 	private func convertToCents(money: String) -> Int {
@@ -141,8 +145,9 @@ class AddDebt: UITableViewController {
 	// MARK: - Table view data source
 	
 	override func numberOfSections(in tableView: UITableView) -> Int {
-		return 0
+		return 1
 	}
+	
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return self.cellIdentifiers.count // ????
@@ -150,29 +155,41 @@ class AddDebt: UITableViewController {
 	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let identifier = self.cellIdentifiers[indexPath.row]
+		
+		switch indexPath.row {
+		case 0:
+			var cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! ABobTableViewCell
+			cell.bobLabel.text = "you lent..."
+			return cell
+		case 1: // text field.
+			var cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! ANameTableViewCell
+			cell.tablevc = self
+			return cell
+		case 2:
+			// money.
+			var cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! AMoneyTableViewCell
+			cell.tablevc = self
+			return cell
+		case 3: // date segmented control
+			var cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! ADateTableViewCell
+			cell.tablevc = self
+			return cell
+		case 4: // description text view
+			var cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! APurposeTableViewCell
+			cell.tablevc = self
+			return cell
+		default:
+			let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+			return cell
+		}
 		let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
-//		
-//		if(iOweYou) {
-//			// dont change anything ... 
-//			switch(indexPath.row) {
-//			case 0:
-//				cell = cell as! ABobTableViewCell
-//				
-//			case 1:
-//			case 2:
-//			case 3:
-//			case 4:
-//				
-//			}
-//		} else {
-//			// u gotta change the shit now. 
-//			
-//		}
-//		
-		// Class cellClass = NSClassFromString(cellIdentifier);
 		return cell
 	}
 	
+	override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+		return false
+	}
+
 	/*
 	// MARK: - Navigation
 	
