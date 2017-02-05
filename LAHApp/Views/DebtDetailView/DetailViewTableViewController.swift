@@ -11,8 +11,10 @@ import UIKit
 class DetailViewTableViewController: UITableViewController {
 	
 	// this depends on the "status".
-	var cellIdentifiers: [String] = ["bob", "name", "money", "date", "purpose"]
+	var cellIdentifiers: [String] = ["BobTableViewCell", "NameTableViewCell", "MoneyTableViewCell", "DateTableViewCell", "PurposeTableViewCell"]
 	var user: User!
+	
+	var iOweYou: Bool = true // default is true. "you owe DAVID SUN $20"
 	
 	var transaction: Transaction! {
 		didSet {
@@ -22,47 +24,43 @@ class DetailViewTableViewController: UITableViewController {
 		}
 	}
 	
-	@IBOutlet weak var bobLabel: UILabel! // "you owe", "you paid", "owes you", "paid you"
-	@IBOutlet weak var nameLabel: UILabel! // DAVID SUN (shit. this is gonna have to be a text field too)
-	@IBOutlet weak var moneyLabel: UILabel! // $20.00
-	@IBOutlet weak var dateLabel: UILabel!
-	@IBOutlet weak var purposeLabel: UILabel!
-	
 	override func viewDidLoad() {
+		print("hello?????")
 		super.viewDidLoad()
-		self.tableView.separatorStyle = .none
+		self.tableView.backgroundColor = UIColor.red
+		self.tableView.reloadData()
+		// self.tableView.separatorStyle = .none
 	}
 	
 	private func configureIdentifiers(lender: User, debtor: User) {
 		// if somebody else owes me money.
 		let status = self.transaction.status
+	
 		if (lender.username == self.user.username) {
 			// if unpaid
-			if (status == Status.Unpaid) {
-				self.bobLabel.text = "owes you"
-				self.dateLabel.text = "by \(Helper.formatDateWithShortYear(date: self.transaction.deadline))"
-			} else {
-				self.bobLabel.text = "paid you"
-				self.dateLabel.text = "on \(Helper.formatDateWithShortYear(date: self.transaction.datePaid!))"
-			}
-			self.cellIdentifiers[0] = "name"
-			self.cellIdentifiers[1] = "bob"
-		} else {
-			// lender = someone else, debtor = me
-			// i owe somebody else money. don't mess with cellIdentifiers array
-			if (status == Status.Unpaid) {
-				self.bobLabel.text = "you owe"
-				self.dateLabel.text = "by \(Helper.formatDateWithShortYear(date: self.transaction.deadline))"
-			} else {
-				self.bobLabel.text = "you paid"
-				self.dateLabel.text = "on \(Helper.formatDateWithShortYear(date: self.transaction.datePaid!))"
-			}
+			self.iOweYou = false
 		}
-		
-		self.nameLabel.text = lender.name
-		self.moneyLabel.text = convertToDollars(cents: self.transaction.cents)
-		self.purposeLabel.text = self.transaction.description
 	}
+//			if (status == Status.Unpaid) {
+//				self.bobLabel.text = "owes you"
+//				self.dateLabel.text = "by \(Helper.formatDateWithShortYear(date: self.transaction.deadline))"
+//			} else {
+//				self.bobLabel.text = "paid you"
+//				self.dateLabel.text = "on \(Helper.formatDateWithShortYear(date: self.transaction.datePaid!))"
+//			}
+//			self.cellIdentifiers[0] = "name"
+//			self.cellIdentifiers[1] = "bob"
+//		} else {
+//			// lender = someone else, debtor = me
+//			// i owe somebody else money. don't mess with cellIdentifiers array
+//			if (status == Status.Unpaid) {
+//				self.bobLabel.text = "you owe"
+//				self.dateLabel.text = "by \(Helper.formatDateWithShortYear(date: self.transaction.deadline))"
+//			} else {
+//				self.bobLabel.text = "you paid"
+//				self.dateLabel.text = "on \(Helper.formatDateWithShortYear(date: self.transaction.datePaid!))"
+//			}
+//		}
 	
 	private func convertToDollars(cents: Int) -> String{
 		let centR = cents%100
@@ -71,13 +69,7 @@ class DetailViewTableViewController: UITableViewController {
 		return "$\(dollars).\(centString)"
 	}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 0
     }
@@ -87,8 +79,38 @@ class DetailViewTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifiers[indexPath.row], for: indexPath)
-        return cell
+		if(iOweYou) {
+			switch indexPath.row {
+			case 0:
+				// you woe - bob
+				print("HEY CASE 0")
+				var cell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifiers[indexPath.row], for: indexPath) as! BobTableViewCell
+				cell.bobLabel.text = "you owe"
+				return cell
+			case 1: // name - david sun
+				var cell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifiers[indexPath.row], for: indexPath) as! NameTableViewCell
+				cell.nameLabel.text = transaction.lender!.name
+				return cell
+			case 2: // money - 20.00
+				var cell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifiers[indexPath.row], for: indexPath) as! MoneyTableViewCell
+				cell.moneyLabel.text = convertToDollars(cents: self.transaction.cents)
+				return cell
+			case 3: // date 
+				var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifiers[indexPath.row], for: indexPath) as! DateTableViewCell
+				cell.dateLabel.text = "by \(Helper.formatDateWithShortYear(date: self.transaction.deadline))"
+				return cell
+			case 4: // purpose
+				var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifiers[indexPath.row], for: indexPath) as! PurposeTableViewCell
+				cell.purposeLabel.text = self.transaction.description
+				return cell
+			default:
+				var cell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifiers[indexPath.row], for: indexPath)
+				return cell
+			}
+		}
+		
+		return tableView.dequeueReusableCell(withIdentifier: self.cellIdentifiers[indexPath.row], for: indexPath)
+		// TODO: fix lmfao (
     }
 
     /*

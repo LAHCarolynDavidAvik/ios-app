@@ -45,7 +45,6 @@ struct Transaction {
 		self.debtor = nil // TODO: FIX THIS SHITTY SHIT
 		self.status = Status(rawValue: json["status"].intValue)!
 		
-		
 		if json["datePaid"].exists() {
 			let datePaidSecs = json["datePaid"].intValue/1000
 			self.datePaid = Date(timeIntervalSince1970: TimeInterval(datePaidSecs))
