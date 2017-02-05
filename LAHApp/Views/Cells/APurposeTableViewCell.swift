@@ -8,13 +8,15 @@
 
 import UIKit
 
-class APurposeTableViewCell: UITableViewCell {
+class APurposeTableViewCell: UITableViewCell, UITextViewDelegate {
 	
 	@IBOutlet weak var purposeTextView: UITextView!
-
+	weak var tablevc: AddDebt?
+	
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+		self.purposeTextView.delegate = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -22,5 +24,9 @@ class APurposeTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+	
+	func textViewDidChange(_ textView: UITextView) {
+		self.tablevc?.purpose = textView.text
+	}
 
 }
