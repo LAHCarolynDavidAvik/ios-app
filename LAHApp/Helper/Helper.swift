@@ -36,6 +36,17 @@ class Helper {
 		}
 	}
 	
+	class func fetchUser(username: String, callback: @escaping (User) -> ()) {
+		let url = "http://losaltoshacks-avikj.rhcloud.com/login"
+		let params: Parameters = ["username": username]
+		Alamofire.request(url, parameters: params).validate().responseJSON { response in
+			let value = response.result.value
+			let json = JSON(value)
+			let user = User(json: json)
+			callback(user)
+		}
+	}
+	
 	class func formatDateWithShortYear(date: Date) -> String {
 		let dateFormatter = DateFormatter()
 		dateFormatter.dateFormat = "M/d/yy"
