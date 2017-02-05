@@ -81,8 +81,14 @@ class DetailViewTableViewController: UITableViewController {
 		performTransactionRequest()
 		//performRequest()
 		super.viewDidLoad()
+        self.view.backgroundColor = Color.Background;
+        self.view.tintColor = Color.White;
+        self.tableView.backgroundColor = UIColor.clear
+        self.tableView.separatorStyle = .none
 		self.tableView.reloadData()
-
+        let nav = self.navigationController?.navigationBar
+        nav?.barStyle = UIBarStyle.black
+        nav?.tintColor = UIColor.white
 		// self.tableView.separatorStyle = .none
 	}
 	
@@ -179,8 +185,8 @@ class DetailViewTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		guard let transaction = self.transaction else {
-		 var cell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifiers[indexPath.row], for: indexPath)
+		guard let _ = self.transaction else {
+		 let cell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifiers[indexPath.row], for: indexPath)
 			return cell
 		}
 		
@@ -189,36 +195,55 @@ class DetailViewTableViewController: UITableViewController {
 			case 0:
 				// you woe - bob
 				print("HEY CASE 0")
-				var cell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifiers[indexPath.row], for: indexPath) as! BobTableViewCell
-				cell.bobLabel.text = "you owe"
+				let cell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifiers[indexPath.row], for: indexPath) as! BobTableViewCell
+				cell.bobLabel.text = "you owe".uppercased()
 				return cell
 			case 1: // name - david sun
-				var cell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifiers[indexPath.row], for: indexPath) as! NameTableViewCell
-				cell.nameLabel.text = self.lender?.name
-				return cell
+				let cell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifiers[indexPath.row], for: indexPath) as! NameTableViewCell
+				cell.nameLabel.text = self.lender?.name.uppercased()
+                return cell
 			case 2: // money - 20.00
-				var cell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifiers[indexPath.row], for: indexPath) as! MoneyTableViewCell
-				if let trans = self.transaction {
-					cell.moneyLabel.text = convertToDollars(cents: trans.cents)
+				let cell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifiers[indexPath.row], for: indexPath) as! MoneyTableViewCell
+                if let trans = self.transaction {
+                    cell.moneyLabel.text = convertToDollars(cents: trans.cents)
 					return cell
 				}
-				return cell
+                return cell
 			case 3: // date 
-				var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifiers[indexPath.row], for: indexPath) as! DateTableViewCell
-				cell.dateLabel.text = "by \(Helper.formatDateWithShortYear(date: self.transaction.deadline))"
-				return cell
+				let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifiers[indexPath.row], for: indexPath) as! DateTableViewCell
+				cell.dateLabel.text = "\(Helper.formatDateWithShortYear(date: self.transaction.deadline))"
+                return cell
 			case 4: // purpose
-				var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifiers[indexPath.row], for: indexPath) as! PurposeTableViewCell
+				let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifiers[indexPath.row], for: indexPath) as! PurposeTableViewCell
 				cell.purposeLabel.text = self.transaction.description
-				return cell
+                cell.backgroundColor = UIColor.clear;
+                return cell
 			default:
-				var cell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifiers[indexPath.row], for: indexPath)
-				return cell
+				let cell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifiers[indexPath.row], for: indexPath)
+                return cell
 			}
 		}
 		
 		return tableView.dequeueReusableCell(withIdentifier: self.cellIdentifiers[indexPath.row], for: indexPath)
 		// TODO: fix lmfao (
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row {
+        case 0:
+            return 30;
+        case 1: // name - david sun
+            return 50;
+        case 2: // money - 20.00
+            return 30;
+        case 3: // date
+            return 30;
+        case 4: // purpose
+            return 50;
+
+        default:
+            return 50;
+        }
     }
 
     /*

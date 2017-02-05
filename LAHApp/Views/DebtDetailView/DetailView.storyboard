@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BSk-iz-I0x">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jvH-DI-kQQ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,117 +18,149 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BobTableViewCell" rowHeight="67" id="Eav-h0-ZAr" customClass="BobTableViewCell" customModule="LAHApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="67"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BobTableViewCell" rowHeight="50" id="Eav-h0-ZAr" customClass="BobTableViewCell" customModule="LAHApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eav-h0-ZAr" id="hGa-Kc-IRK">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="you owe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Cy-7Y-afE">
-                                            <rect key="frame" x="140" y="23" width="95" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="you owe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Cy-7Y-afE" customClass="DefaultLabel" customModule="LAHApp">
+                                            <rect key="frame" x="16" y="23" width="343" height="11"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="7Cy-7Y-afE" firstAttribute="leading" secondItem="hGa-Kc-IRK" secondAttribute="leadingMargin" constant="8" id="Cqd-j1-r5f"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="7Cy-7Y-afE" secondAttribute="trailing" constant="8" id="RaT-tn-Q2Y"/>
+                                        <constraint firstItem="7Cy-7Y-afE" firstAttribute="top" secondItem="hGa-Kc-IRK" secondAttribute="topMargin" constant="15" id="eYW-hW-V6K"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="7Cy-7Y-afE" secondAttribute="bottom" constant="8" id="ipA-Rr-8Fg"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="bobLabel" destination="7Cy-7Y-afE" id="w1W-d7-I02"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NameTableViewCell" rowHeight="67" id="Afr-2a-QQR" customClass="NameTableViewCell" customModule="LAHApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="95" width="375" height="67"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NameTableViewCell" rowHeight="40" id="Afr-2a-QQR" customClass="NameTableViewCell" customModule="LAHApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="78" width="375" height="40"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Afr-2a-QQR" id="ZcO-XO-s76">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DAVID SUN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5K-jt-ExI">
-                                            <rect key="frame" x="100" y="20" width="169" height="27"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DAVID SUN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5K-jt-ExI" customClass="PrimaryLabel" customModule="LAHApp">
+                                            <rect key="frame" x="16" y="13" width="343" height="19"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="g5K-jt-ExI" secondAttribute="bottom" id="0ek-UK-I7q"/>
+                                        <constraint firstItem="g5K-jt-ExI" firstAttribute="top" secondItem="ZcO-XO-s76" secondAttribute="topMargin" id="6Yi-yc-XJa"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="g5K-jt-ExI" secondAttribute="trailing" constant="8" id="6c0-cI-mcJ"/>
+                                        <constraint firstItem="g5K-jt-ExI" firstAttribute="leading" secondItem="ZcO-XO-s76" secondAttribute="leadingMargin" constant="8" id="I3y-E4-iqD"/>
+                                        <constraint firstItem="g5K-jt-ExI" firstAttribute="top" secondItem="ZcO-XO-s76" secondAttribute="topMargin" constant="5" id="YKn-EU-zqU"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="g5K-jt-ExI" id="stF-cS-TrR"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MoneyTableViewCell" rowHeight="67" id="lC4-AN-GbX" customClass="MoneyTableViewCell" customModule="LAHApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="162" width="375" height="67"/>
+                                <rect key="frame" x="0.0" y="118" width="375" height="67"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lC4-AN-GbX" id="l7N-bV-bfl">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$20.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8k-AK-bbh">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$20.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8k-AK-bbh" customClass="PrimaryLabel" customModule="LAHApp">
                                             <rect key="frame" x="140" y="23" width="95" height="27"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="c8k-AK-bbh" secondAttribute="trailing" constant="8" id="HjE-QN-Zuo"/>
+                                        <constraint firstItem="c8k-AK-bbh" firstAttribute="leading" secondItem="l7N-bV-bfl" secondAttribute="leadingMargin" constant="8" id="Vfd-2H-m8h"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="c8k-AK-bbh" secondAttribute="bottom" constant="12" id="jB1-HT-Kji"/>
+                                        <constraint firstItem="c8k-AK-bbh" firstAttribute="top" secondItem="l7N-bV-bfl" secondAttribute="topMargin" constant="12" id="zVV-Cx-kHH"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="moneyLabel" destination="c8k-AK-bbh" id="zu6-bV-8AE"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DateTableViewCell" rowHeight="67" id="c8u-WL-sY3" customClass="DateTableViewCell" customModule="LAHApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="229" width="375" height="67"/>
+                                <rect key="frame" x="0.0" y="185" width="375" height="67"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c8u-WL-sY3" id="4Gd-Ip-FFl">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="By" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdp-pj-boT">
-                                            <rect key="frame" x="21" y="23" width="20" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2/2/17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdw-mu-lgn">
-                                            <rect key="frame" x="155" y="23" width="48" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1xJ-wf-qmL">
+                                            <rect key="frame" x="21" y="23" width="78" height="21"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdp-pj-boT" customClass="DefaultLabel" customModule="LAHApp">
+                                                    <rect key="frame" x="0.0" y="0.5" width="20" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2/2/17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdw-mu-lgn" customClass="DefaultLabel" customModule="LAHApp">
+                                                    <rect key="frame" x="30" y="0.5" width="48" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1xJ-wf-qmL" firstAttribute="top" secondItem="4Gd-Ip-FFl" secondAttribute="topMargin" constant="15" id="A2a-rA-DAy"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="1xJ-wf-qmL" secondAttribute="bottom" constant="15" id="CCU-u5-ATg"/>
+                                        <constraint firstItem="1xJ-wf-qmL" firstAttribute="leading" secondItem="4Gd-Ip-FFl" secondAttribute="leadingMargin" constant="8" id="QOm-PC-iA0"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="dateByLabel" destination="Pdp-pj-boT" id="fYh-pk-Y35"/>
                                     <outlet property="dateLabel" destination="Bdw-mu-lgn" id="kAD-in-hUm"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PurposeTableViewCell" rowHeight="315" id="9NB-9x-fCI" customClass="PurposeTableViewCell" customModule="LAHApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="296" width="375" height="315"/>
+                                <rect key="frame" x="0.0" y="252" width="375" height="315"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9NB-9x-fCI" id="g6v-vv-XqC">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="315"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Purpose: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUq-Ms-cQN">
-                                            <rect key="frame" x="17" y="8" width="95" height="27"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Purpose: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUq-Ms-cQN" customClass="PrimaryLabel" customModule="LAHApp">
+                                            <rect key="frame" x="16" y="8" width="351" height="27"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fucking lines and shit yo ugh laksjdflkajdf;la sdf; asdjfl;ajsd f;lkasd f;lkajs df" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yp3-8H-zrP">
-                                            <rect key="frame" x="17" y="45" width="646" height="49"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fucking lines and shit yo ugh laksjdflkajdf;la sdf; asdjfl;ajsd f;lkasd f;lkajs df" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yp3-8H-zrP" customClass="DefaultLabel" customModule="LAHApp">
+                                            <rect key="frame" x="16" y="45" width="351" height="41"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="UUq-Ms-cQN" secondAttribute="trailing" id="3yl-Gn-Jvo"/>
+                                        <constraint firstAttribute="trailing" secondItem="yp3-8H-zrP" secondAttribute="trailing" constant="8" id="Hd5-i1-b0b"/>
+                                        <constraint firstItem="UUq-Ms-cQN" firstAttribute="leading" secondItem="g6v-vv-XqC" secondAttribute="leadingMargin" constant="8" id="L4C-3E-odZ"/>
+                                        <constraint firstItem="yp3-8H-zrP" firstAttribute="leading" secondItem="g6v-vv-XqC" secondAttribute="leading" constant="16" id="PWN-CT-30k"/>
+                                        <constraint firstItem="yp3-8H-zrP" firstAttribute="top" secondItem="UUq-Ms-cQN" secondAttribute="bottom" constant="10" id="oz3-5R-Cw9"/>
+                                        <constraint firstItem="UUq-Ms-cQN" firstAttribute="top" secondItem="g6v-vv-XqC" secondAttribute="topMargin" id="qIf-S2-cPa"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="primaryTitle" destination="UUq-Ms-cQN" id="m1d-YH-D8I"/>
                                     <outlet property="purposeLabel" destination="yp3-8H-zrP" id="wzd-BV-f3R"/>
                                 </connections>
                             </tableViewCell>
@@ -139,6 +171,7 @@
                             <outlet property="delegate" destination="BSk-iz-I0x" id="zrz-f8-esJ"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="1Zd-g7-9ij"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rcx-Aa-biM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="Pbo-7L-Iyv">
@@ -146,6 +179,24 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
+            </objects>
+            <point key="canvasLocation" x="792.79999999999995" y="-113.79310344827587"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xYq-R2-ySS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jvH-DI-kQQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4nM-ti-0zv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BSk-iz-I0x" kind="relationship" relationship="rootViewController" id="jCs-nF-HLy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7a0-VO-EBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-146.40000000000001" y="-113.79310344827587"/>
         </scene>

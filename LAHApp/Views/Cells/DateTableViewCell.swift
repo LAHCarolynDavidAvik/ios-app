@@ -10,8 +10,10 @@ import UIKit
 
 class DateTableViewCell: UITableViewCell {
 	
-	@IBOutlet weak var dateLabel: UILabel!
+	@IBOutlet weak var dateLabel: DefaultLabel!
 
+    @IBOutlet var dateByLabel: DefaultLabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,8 +21,12 @@ class DateTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        self.backgroundColor = UIColor.clear;
+        let myBackView = UIView(frame: self.frame);
+        myBackView.backgroundColor = UIColor(white: 1, alpha: 0.05);
+        self.selectedBackgroundView = myBackView;
+        self.dateLabel.setFontSize(size: 18)
+        self.dateByLabel.setFontSize(size: 14)
     }
 
 }
