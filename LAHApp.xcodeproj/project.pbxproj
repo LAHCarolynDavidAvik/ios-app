@@ -27,6 +27,8 @@
 		82C5EE0A1E46D1D500A8EF07 /* AddFriend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C5EE091E46D1D500A8EF07 /* AddFriend.storyboard */; };
 		82C5EE0C1E46D1EF00A8EF07 /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C5EE0B1E46D1EF00A8EF07 /* AddFriendViewController.swift */; };
 		82C5EE0F1E46D48000A8EF07 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C5EE0E1E46D48000A8EF07 /* Helper.swift */; };
+		82C5EE131E46EB2600A8EF07 /* DetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C5EE121E46EB2600A8EF07 /* DetailView.storyboard */; };
+		82C5EE151E46EB6300A8EF07 /* DetailViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C5EE141E46EB6300A8EF07 /* DetailViewTableViewController.swift */; };
 		BE93E1FF0490BB1454D1DCA8 /* Pods_LAHApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220DFCF2301AB78F4927AF74 /* Pods_LAHApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,8 @@
 		82C5EE091E46D1D500A8EF07 /* AddFriend.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AddFriend.storyboard; path = ViewControllers/AddFriend.storyboard; sourceTree = "<group>"; };
 		82C5EE0B1E46D1EF00A8EF07 /* AddFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddFriendViewController.swift; path = ViewControllers/AddFriendViewController.swift; sourceTree = "<group>"; };
 		82C5EE0E1E46D48000A8EF07 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		82C5EE121E46EB2600A8EF07 /* DetailView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailView.storyboard; sourceTree = "<group>"; };
+		82C5EE141E46EB6300A8EF07 /* DetailViewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 		820A4D151E467705002105D4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				82C5EE111E46EB1100A8EF07 /* DebtDetailView */,
 				820A4D161E467724002105D4 /* FriendTableViewCell.swift */,
 			);
 			path = Views;
@@ -163,6 +168,15 @@
 				82C5EE0E1E46D48000A8EF07 /* Helper.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		82C5EE111E46EB1100A8EF07 /* DebtDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				82C5EE121E46EB2600A8EF07 /* DetailView.storyboard */,
+				82C5EE141E46EB6300A8EF07 /* DetailViewTableViewController.swift */,
+			);
+			path = DebtDetailView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +251,7 @@
 				82BE39571E466B17006C8A5F /* Main.storyboard in Resources */,
 				82C5EDFF1E46969200A8EF07 /* AddEntry.storyboard in Resources */,
 				824FEA631E4694A000A58809 /* Login.storyboard in Resources */,
+				82C5EE131E46EB2600A8EF07 /* DetailView.storyboard in Resources */,
 				824FEA5D1E46945D00A58809 /* Dashboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +314,7 @@
 				82C5EE0F1E46D48000A8EF07 /* Helper.swift in Sources */,
 				820A4D191E467BDF002105D4 /* FriendViewController.swift in Sources */,
 				820A4D0F1E466F70002105D4 /* LoginViewController.swift in Sources */,
+				82C5EE151E46EB6300A8EF07 /* DetailViewTableViewController.swift in Sources */,
 				82C5EE0C1E46D1EF00A8EF07 /* AddFriendViewController.swift in Sources */,
 				820A4D1E1E468166002105D4 /* Transaction.swift in Sources */,
 				820A4D111E46758A002105D4 /* FriendsListTableViewController.swift in Sources */,
