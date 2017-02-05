@@ -23,7 +23,7 @@ class MoneyTableViewCell: UITableViewCell {
         let myBackView = UIView(frame: self.frame);
         myBackView.backgroundColor = UIColor(white: 1, alpha: 0.05);
         self.selectedBackgroundView = myBackView;
-        self.moneyLabel.setFontSize(size: 18)
+        self.moneyLabel.setFontSize(size: 26)
         // Configure the view for the selected state
     }
 

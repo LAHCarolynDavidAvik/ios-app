@@ -47,6 +47,7 @@
 		82E04B361E475E3000C38A74 /* PendingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E04B351E475E3000C38A74 /* PendingTableViewController.swift */; };
 		82E04B381E475E3A00C38A74 /* Pending.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82E04B371E475E3A00C38A74 /* Pending.storyboard */; };
 		82E04B3A1E47623B00C38A74 /* PendingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E04B391E47623B00C38A74 /* PendingTableViewCell.swift */; };
+		82E04B3C1E476D8C00C38A74 /* defaultTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E04B3B1E476D8C00C38A74 /* defaultTextField.swift */; };
 		BE93E1FF0490BB1454D1DCA8 /* Pods_LAHApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220DFCF2301AB78F4927AF74 /* Pods_LAHApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,7 @@
 		82E04B351E475E3000C38A74 /* PendingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingTableViewController.swift; sourceTree = "<group>"; };
 		82E04B371E475E3A00C38A74 /* Pending.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Pending.storyboard; path = ViewControllers/Pending.storyboard; sourceTree = "<group>"; };
 		82E04B391E47623B00C38A74 /* PendingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingTableViewCell.swift; sourceTree = "<group>"; };
+		82E04B3B1E476D8C00C38A74 /* defaultTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = defaultTextField.swift; path = LAHApp/Views/defaultTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 		82BE39451E466B17006C8A5F = {
 			isa = PBXGroup;
 			children = (
+				82E04B3B1E476D8C00C38A74 /* defaultTextField.swift */,
 				550EDBCF1E473DD0002DF3EB /* AddDebt.storyboard */,
 				550EDBCE1E473DA4002DF3EB /* DetailView.storyboard */,
 				550EDBCD1E473D4D002DF3EB /* ADateTableViewCell.swift */,
@@ -403,6 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82E04B3C1E476D8C00C38A74 /* defaultTextField.swift in Sources */,
 				55DC427D1E473B0F000CFC52 /* ADateTableViewCell.swift in Sources */,
 				55DC427C1E473B0F000CFC52 /* ABobTableViewCell.swift in Sources */,
 				82C5EE0F1E46D48000A8EF07 /* Helper.swift in Sources */,

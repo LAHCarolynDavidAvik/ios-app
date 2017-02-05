@@ -42,7 +42,6 @@ class PendingTableViewController: UITableViewController {
 		guard let array = self.pendingArray else { return 0 }
 		return array.count
     }
-
 	
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		guard let array = self.pendingArray else {

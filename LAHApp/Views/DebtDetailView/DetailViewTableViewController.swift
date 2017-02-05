@@ -141,7 +141,6 @@ class DetailViewTableViewController: UITableViewController {
 	private func configureIdentifiers(lender: User, debtor: User) {
 		// if somebody else owes me money.
 		let status = self.transaction.status
-	
 		if (lender.username == self.user?.username) {
 			// if unpaid
 			self.iOweYou = false
@@ -227,6 +226,12 @@ class DetailViewTableViewController: UITableViewController {
 		return tableView.dequeueReusableCell(withIdentifier: self.cellIdentifiers[indexPath.row], for: indexPath)
 		// TODO: fix lmfao (
     }
+	
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		if(indexPath.row == 5) {
+			self.dismiss(animated: true, completion: nil)
+		}
+	}
 
     /*
     // MARK: - Navigation

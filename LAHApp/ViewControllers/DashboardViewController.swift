@@ -66,6 +66,7 @@ class DashboardViewController: UIViewController,UITableViewDataSource,UITableVie
         nav?.barStyle = UIBarStyle.black
         nav?.tintColor = UIColor.white
         let titleLabel = PrimaryLabel(frame: CGRect(x: 0, y: 0, width: 60, height: 30));
+		titleLabel.setFontSize(size: 20)
         titleLabel.text = self.user?.username
         self.navigationItem.titleView = titleLabel;
 	}
@@ -90,7 +91,6 @@ class DashboardViewController: UIViewController,UITableViewDataSource,UITableVie
 						let t = Transaction(json: json)
 						self.owedTransactions.append(t)
 					}
-					
 					// calculate pending
 					
 					let unconfirmed = json["unconfirmed"].arrayValue
@@ -145,8 +145,8 @@ class DashboardViewController: UIViewController,UITableViewDataSource,UITableVie
 		}
         cell.mainTextLabel.setFontSize(size: 16);
 		cell.subTextLabel.text = "\(convertToDollars(cents: arrayToUse[indexPath.row].cents))" // money
-        cell.backgroundColor = UIColor.clear;
-        cell.contentView.backgroundColor = UIColor.clear;
+        cell.backgroundColor = Color.Background //UIColor.clear;
+        cell.contentView.backgroundColor = Color.Background //UIColor.clear;
         let myBackView = UIView(frame: cell.frame);
         myBackView.backgroundColor = UIColor(white: 1, alpha: 0.05)
         cell.selectedBackgroundView = myBackView;

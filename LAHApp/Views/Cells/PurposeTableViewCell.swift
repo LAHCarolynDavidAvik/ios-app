@@ -24,8 +24,8 @@ class PurposeTableViewCell: UITableViewCell {
         let myBackView = UIView(frame: self.frame);
         myBackView.backgroundColor = UIColor(white: 1, alpha: 0.05);
         self.selectedBackgroundView = myBackView;
-        self.primaryTitle.setFontSize(size: 20)
-        self.purposeLabel.setFontSize(size: 18)
+        self.primaryTitle.setFontSize(size: 25)
+        self.purposeLabel.setFontSize(size: 20)
         // Configure the view for the selected state
     }
 

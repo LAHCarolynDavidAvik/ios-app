@@ -19,11 +19,11 @@ class ABobTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        self.backgroundColor = UIColor.clear;
+        self.backgroundColor = Background.Color
         let myBackView = UIView(frame: self.frame);
         myBackView.backgroundColor = UIColor(white: 1, alpha: 0.05);
         self.selectedBackgroundView = myBackView;
-        self.bobLabel.setFontSize(size:20);
+        self.bobLabel.setFontSize(size:30);
         // Configure the view for the selected state
     }
 
