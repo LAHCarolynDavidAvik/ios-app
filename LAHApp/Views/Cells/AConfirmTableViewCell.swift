@@ -1,5 +1,5 @@
 //
-//  ADateTableViewCell.swift
+//  ABobTableViewCell.swift
 //  LAHApp
 //
 //  Created by Carolyn DUan on 2/5/17.
@@ -8,38 +8,25 @@
 
 import UIKit
 
-class ADateTableViewCell: UITableViewCell {
-	
-	@IBOutlet weak var dateSegmentControl: UISegmentedControl!
-    @IBOutlet weak var byLabel: DefaultLabel!
-	
-	weak var tablevc: AddDebt?
-
+class AConfirmTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var confirmButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-		
-	self.dateSegmentControl.addTarget(self, action: #selector(ADateTableViewCell.action(_:)), for: .valueChanged)
-
     }
-	
-	// whenever segment control changes, this changes
-	func action(_ segmentControl: UISegmentedControl) {
-		guard let vc = self.tablevc else {
-			return
-		}
-		vc.selectedIndex = self.dateSegmentControl.selectedSegmentIndex
-		
-	}
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         self.backgroundColor = UIColor.clear;
         let myBackView = UIView(frame: self.frame);
         myBackView.backgroundColor = UIColor(white: 1, alpha: 0.05);
         self.selectedBackgroundView = myBackView;
-        self.byLabel.setFontSize(size: 16)
+        self.confirmButton.layer.cornerRadius = self.confirmButton.bounds.height/2;
+        self.confirmButton.backgroundColor = Color.Primary;
+        self.confirmButton.titleLabel?.font = UIFont(name: "Futura", size: 16);
         // Configure the view for the selected state
     }
-
+    
 }

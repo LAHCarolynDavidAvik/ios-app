@@ -13,7 +13,7 @@ import Alamofire
 class DetailViewTableViewController: UITableViewController {
 	
 	// this depends on the "status".
-	var cellIdentifiers: [String] = ["BobTableViewCell", "NameTableViewCell", "MoneyTableViewCell", "DateTableViewCell", "PurposeTableViewCell"]
+	var cellIdentifiers: [String] = ["BobTableViewCell", "NameTableViewCell", "MoneyTableViewCell", "DateTableViewCell", "PurposeTableViewCell","CloseCell"]
 	
 	var iOweYou: Bool = true // default is true. "you owe DAVID SUN $20"
 	var user: User?

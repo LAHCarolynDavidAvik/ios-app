@@ -12,7 +12,12 @@ import UIKit
 
 class FAButton: UIButton {
     
-    let iconFileName:String = "Add";
+    var iconFileName:String = "Add" {
+        didSet {
+            self.icon?.image = UIImage(named: iconFileName)
+        }
+    };
+    
     var icon:UIImageView?
     
     override init(frame:CGRect) {
