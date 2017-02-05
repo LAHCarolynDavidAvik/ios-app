@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		557C50421E476F0E00B020BF /* defaultTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557C50411E476F0E00B020BF /* defaultTextField.swift */; };
+		557C50441E47716400B020BF /* CloseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557C50431E47716400B020BF /* CloseTableViewCell.swift */; };
 		5582C8EC1E472E9200D671E9 /* PrimaryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582C8EA1E472E9200D671E9 /* PrimaryLabel.swift */; };
 		5582C8ED1E472E9200D671E9 /* UIDefaultLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582C8EB1E472E9200D671E9 /* UIDefaultLabel.swift */; };
 		5582C8F11E472E9D00D671E9 /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582C8EE1E472E9D00D671E9 /* DashboardTableViewCell.swift */; };
@@ -58,6 +60,8 @@
 		550EDBCD1E473D4D002DF3EB /* ADateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ADateTableViewCell.swift; path = LAHApp/Views/Cells/ADateTableViewCell.swift; sourceTree = "<group>"; };
 		550EDBCE1E473DA4002DF3EB /* DetailView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = DetailView.storyboard; path = LAHApp/Views/DebtDetailView/DetailView.storyboard; sourceTree = "<group>"; };
 		550EDBCF1E473DD0002DF3EB /* AddDebt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = AddDebt.storyboard; path = LAHApp/Views/AddDebt/AddDebt.storyboard; sourceTree = "<group>"; };
+		557C50411E476F0E00B020BF /* defaultTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = defaultTextField.swift; path = LAHApp/Views/defaultTextField.swift; sourceTree = "<group>"; };
+		557C50431E47716400B020BF /* CloseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CloseTableViewCell.swift; path = LAHApp/Views/Cells/CloseTableViewCell.swift; sourceTree = "<group>"; };
 		5582C8EA1E472E9200D671E9 /* PrimaryLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryLabel.swift; sourceTree = "<group>"; };
 		5582C8EB1E472E9200D671E9 /* UIDefaultLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDefaultLabel.swift; sourceTree = "<group>"; };
 		5582C8EE1E472E9D00D671E9 /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
@@ -228,6 +232,8 @@
 		82BE39451E466B17006C8A5F = {
 			isa = PBXGroup;
 			children = (
+				557C50431E47716400B020BF /* CloseTableViewCell.swift */,
+				557C50411E476F0E00B020BF /* defaultTextField.swift */,
 				550EDBCF1E473DD0002DF3EB /* AddDebt.storyboard */,
 				550EDBCE1E473DA4002DF3EB /* DetailView.storyboard */,
 				550EDBCD1E473D4D002DF3EB /* ADateTableViewCell.swift */,
@@ -306,7 +312,7 @@
 				TargetAttributes = {
 					82BE394D1E466B17006C8A5F = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = 5ABR29YEK9;
+						DevelopmentTeam = APHA6W5N27;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -403,6 +409,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				557C50441E47716400B020BF /* CloseTableViewCell.swift in Sources */,
+				557C50421E476F0E00B020BF /* defaultTextField.swift in Sources */,
 				55DC427D1E473B0F000CFC52 /* ADateTableViewCell.swift in Sources */,
 				55DC427C1E473B0F000CFC52 /* ABobTableViewCell.swift in Sources */,
 				82C5EE0F1E46D48000A8EF07 /* Helper.swift in Sources */,
@@ -554,7 +562,7 @@
 			baseConfigurationReference = 365A550680ADDB2273FDF3F9 /* Pods-LAHApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5ABR29YEK9;
+				DEVELOPMENT_TEAM = APHA6W5N27;
 				INFOPLIST_FILE = LAHApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.duancaro.LAHApp;
@@ -568,7 +576,7 @@
 			baseConfigurationReference = 05D18E5B0126146AC5B59CEB /* Pods-LAHApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5ABR29YEK9;
+				DEVELOPMENT_TEAM = APHA6W5N27;
 				INFOPLIST_FILE = LAHApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.duancaro.LAHApp;
