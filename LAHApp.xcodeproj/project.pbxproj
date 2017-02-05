@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5582C8EC1E472E9200D671E9 /* PrimaryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582C8EA1E472E9200D671E9 /* PrimaryLabel.swift */; };
+		5582C8ED1E472E9200D671E9 /* UIDefaultLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582C8EB1E472E9200D671E9 /* UIDefaultLabel.swift */; };
+		5582C8F11E472E9D00D671E9 /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582C8EE1E472E9D00D671E9 /* DashboardTableViewCell.swift */; };
+		5582C8F21E472E9D00D671E9 /* DefaultLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582C8EF1E472E9D00D671E9 /* DefaultLabel.swift */; };
+		5582C8F31E472E9D00D671E9 /* fab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582C8F01E472E9D00D671E9 /* fab.swift */; };
+		55DF54681E47314B000EC38A /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF54671E47314B000EC38A /* constants.swift */; };
 		820A4D0D1E466DD9002105D4 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820A4D0C1E466DD9002105D4 /* DashboardViewController.swift */; };
 		820A4D0F1E466F70002105D4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820A4D0E1E466F70002105D4 /* LoginViewController.swift */; };
 		820A4D111E46758A002105D4 /* FriendsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820A4D101E46758A002105D4 /* FriendsListTableViewController.swift */; };
@@ -31,6 +37,12 @@
 		05D18E5B0126146AC5B59CEB /* Pods-LAHApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAHApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-LAHApp/Pods-LAHApp.release.xcconfig"; sourceTree = "<group>"; };
 		220DFCF2301AB78F4927AF74 /* Pods_LAHApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LAHApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		365A550680ADDB2273FDF3F9 /* Pods-LAHApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAHApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LAHApp/Pods-LAHApp.debug.xcconfig"; sourceTree = "<group>"; };
+		5582C8EA1E472E9200D671E9 /* PrimaryLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryLabel.swift; sourceTree = "<group>"; };
+		5582C8EB1E472E9200D671E9 /* UIDefaultLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDefaultLabel.swift; sourceTree = "<group>"; };
+		5582C8EE1E472E9D00D671E9 /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
+		5582C8EF1E472E9D00D671E9 /* DefaultLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultLabel.swift; sourceTree = "<group>"; };
+		5582C8F01E472E9D00D671E9 /* fab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fab.swift; sourceTree = "<group>"; };
+		55DF54671E47314B000EC38A /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		820A4D0C1E466DD9002105D4 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardViewController.swift; path = ViewControllers/DashboardViewController.swift; sourceTree = "<group>"; };
 		820A4D0E1E466F70002105D4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = "<group>"; };
 		820A4D101E46758A002105D4 /* FriendsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsListTableViewController.swift; path = ViewControllers/FriendsListTableViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +93,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		55DF54661E47314B000EC38A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				55DF54671E47314B000EC38A /* constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		820A4D0B1E466DBD002105D4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +121,11 @@
 		820A4D151E467705002105D4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5582C8EE1E472E9D00D671E9 /* DashboardTableViewCell.swift */,
+				5582C8EF1E472E9D00D671E9 /* DefaultLabel.swift */,
+				5582C8F01E472E9D00D671E9 /* fab.swift */,
+				5582C8EA1E472E9200D671E9 /* PrimaryLabel.swift */,
+				5582C8EB1E472E9200D671E9 /* UIDefaultLabel.swift */,
 				820A4D161E467724002105D4 /* FriendTableViewCell.swift */,
 			);
 			path = Views;
@@ -109,6 +134,7 @@
 		820A4D1A1E467F37002105D4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				55DF54661E47314B000EC38A /* Constants */,
 				820A4D1B1E467F3E002105D4 /* User.swift */,
 				820A4D1D1E468166002105D4 /* Transaction.swift */,
 			);
@@ -183,7 +209,7 @@
 				TargetAttributes = {
 					82BE394D1E466B17006C8A5F = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = 5ABR29YEK9;
+						DevelopmentTeam = APHA6W5N27;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -268,7 +294,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -280,12 +306,18 @@
 			files = (
 				820A4D191E467BDF002105D4 /* FriendViewController.swift in Sources */,
 				820A4D0F1E466F70002105D4 /* LoginViewController.swift in Sources */,
+				5582C8ED1E472E9200D671E9 /* UIDefaultLabel.swift in Sources */,
 				820A4D1E1E468166002105D4 /* Transaction.swift in Sources */,
 				820A4D111E46758A002105D4 /* FriendsListTableViewController.swift in Sources */,
 				820A4D171E467724002105D4 /* FriendTableViewCell.swift in Sources */,
+				5582C8F11E472E9D00D671E9 /* DashboardTableViewCell.swift in Sources */,
+				5582C8EC1E472E9200D671E9 /* PrimaryLabel.swift in Sources */,
+				55DF54681E47314B000EC38A /* constants.swift in Sources */,
 				82BE39521E466B17006C8A5F /* AppDelegate.swift in Sources */,
+				5582C8F31E472E9D00D671E9 /* fab.swift in Sources */,
 				82C5EE011E4696A200A8EF07 /* AddEntryViewController.swift in Sources */,
 				820A4D0D1E466DD9002105D4 /* DashboardViewController.swift in Sources */,
+				5582C8F21E472E9D00D671E9 /* DefaultLabel.swift in Sources */,
 				820A4D1C1E467F3E002105D4 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,7 +440,7 @@
 			baseConfigurationReference = 365A550680ADDB2273FDF3F9 /* Pods-LAHApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5ABR29YEK9;
+				DEVELOPMENT_TEAM = APHA6W5N27;
 				INFOPLIST_FILE = LAHApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.duancaro.LAHApp;
@@ -422,7 +454,7 @@
 			baseConfigurationReference = 05D18E5B0126146AC5B59CEB /* Pods-LAHApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5ABR29YEK9;
+				DEVELOPMENT_TEAM = APHA6W5N27;
 				INFOPLIST_FILE = LAHApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.duancaro.LAHApp;
