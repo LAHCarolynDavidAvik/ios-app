@@ -105,11 +105,11 @@
                                     <outlet property="dateLabel" destination="Bdw-mu-lgn" id="kAD-in-hUm"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PurposeTableViewCell" rowHeight="112" id="9NB-9x-fCI" customClass="PurposeTableViewCell" customModule="LAHApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="296" width="375" height="112"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PurposeTableViewCell" rowHeight="315" id="9NB-9x-fCI" customClass="PurposeTableViewCell" customModule="LAHApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="296" width="375" height="315"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9NB-9x-fCI" id="g6v-vv-XqC">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="315"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Purpose: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUq-Ms-cQN">
@@ -147,7 +147,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="-146" y="-113"/>
+            <point key="canvasLocation" x="-146.40000000000001" y="-113.79310344827587"/>
         </scene>
     </scenes>
 </document>

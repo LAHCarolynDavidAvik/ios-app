@@ -7,36 +7,136 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Alamofire
 
 class DetailViewTableViewController: UITableViewController {
 	
 	// this depends on the "status".
 	var cellIdentifiers: [String] = ["BobTableViewCell", "NameTableViewCell", "MoneyTableViewCell", "DateTableViewCell", "PurposeTableViewCell"]
-	var user: User!
 	
 	var iOweYou: Bool = true // default is true. "you owe DAVID SUN $20"
+	var user: User?
+	var lender: User?
+	var debtor: User? {
+		didSet {
+			print("hello reloading data")
+			self.tableView.reloadData()
+		}
+	}
 	
 	var transaction: Transaction! {
 		didSet {
 			// configure cell identifiers and figure out the order and labels and shit.
-			configureIdentifiers(lender: transaction.lender!, debtor: transaction.debtor!) // TODO: DON'T NEED TO FORCE UNWRAP
-			self.tableView.reloadData()
+			let url = "http://losaltoshacks-avikj.rhcloud.com/login"
+			
+			let param1: Parameters = [
+				"username": transaction.lender
+			]
+			
+			let param2: Parameters = [
+				"username": transaction.debtor
+			]
+			
+			Alamofire.request(url, parameters: param1).validate().responseJSON { response in
+				switch response.result {
+				case .success:
+					if let value = response.result.value {
+						let json = JSON(value)
+						let user = User(json: json)
+						self.lender = user
+					}
+			
+					// 2nd
+					
+					Alamofire.request(url, parameters: param2).validate().responseJSON { response in
+						switch response.result {
+						case .success:
+							if let value = response.result.value {
+								let json = JSON(value)
+								let user = User(json: json)
+								self.debtor = user
+							}
+							
+							self.configureIdentifiers(lender: self.lender!, debtor: self.debtor!) // TODO: DON'T NEED TO FORCE UNWRAP
+							self.tableView.reloadData()
+						case .failure(let error):
+							print("o no error")
+							print(error)
+						}
+					}
+					
+					
+				case .failure(let error):
+					print("o no error")
+					print(error)
+				}
+			}
+			
 		}
 	}
 	
 	override func viewDidLoad() {
 		print("hello?????")
+		performTransactionRequest()
+		//performRequest()
 		super.viewDidLoad()
-		self.tableView.backgroundColor = UIColor.red
 		self.tableView.reloadData()
+
 		// self.tableView.separatorStyle = .none
+	}
+	
+	func performTransactionRequest() {
+		let url = "http://losaltoshacks-avikj.rhcloud.com/transactions"
+		Alamofire.request(url, parameters: ["username": "avik"]).validate().responseJSON { response in
+			switch response.result {
+			case .success:
+				print("success")
+				if let value = response.result.value {
+					let json = JSON(value)
+					let transArray = json["lent"].arrayValue
+					// TODO: fix this
+					self.transaction = Transaction(json: transArray[0])
+					self.tableView.reloadData()
+				}
+			case .failure(let error):
+				print(error)
+			}
+		}
+	}
+	
+	// this is bullshit
+	func performRequest() {
+		let params: Parameters = [
+			"username": "avik",
+			"password": "jain"
+		]
+		
+		let url = "http://losaltoshacks-avikj.rhcloud.com/login"
+		
+		Alamofire.request(url, parameters: params).validate().responseJSON { response in
+			switch response.result {
+			case .success:
+				if let value = response.result.value {
+					let json = JSON(value)
+					let user = User(json: json)
+					print(user.name)
+					self.transaction = user.transactions[0]
+					self.tableView.reloadData()
+					print("wtf")
+				}
+			case .failure(let error):
+				print("o no error")
+				print(error)
+			}
+		}
 	}
 	
 	private func configureIdentifiers(lender: User, debtor: User) {
 		// if somebody else owes me money.
 		let status = self.transaction.status
 	
-		if (lender.username == self.user.username) {
+		if (lender.username == self.user?.username) {
 			// if unpaid
 			self.iOweYou = false
 		}
@@ -71,7 +171,7 @@ class DetailViewTableViewController: UITableViewController {
 
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -79,6 +179,11 @@ class DetailViewTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		guard let transaction = self.transaction else {
+		 var cell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifiers[indexPath.row], for: indexPath)
+			return cell
+		}
+		
 		if(iOweYou) {
 			switch indexPath.row {
 			case 0:
@@ -89,11 +194,14 @@ class DetailViewTableViewController: UITableViewController {
 				return cell
 			case 1: // name - david sun
 				var cell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifiers[indexPath.row], for: indexPath) as! NameTableViewCell
-				cell.nameLabel.text = transaction.lender!.name
+				cell.nameLabel.text = self.lender?.name
 				return cell
 			case 2: // money - 20.00
 				var cell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifiers[indexPath.row], for: indexPath) as! MoneyTableViewCell
-				cell.moneyLabel.text = convertToDollars(cents: self.transaction.cents)
+				if let trans = self.transaction {
+					cell.moneyLabel.text = convertToDollars(cents: trans.cents)
+					return cell
+				}
 				return cell
 			case 3: // date 
 				var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifiers[indexPath.row], for: indexPath) as! DateTableViewCell

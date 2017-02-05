@@ -8,11 +8,12 @@
 
 import Foundation
 import SwiftyJSON
+import Alamofire
 
 struct Transaction {
 	
-	let lender: User? // will be given as a string
-	let debtor: User? // ''
+	var lender: String // will be given as a string
+	var debtor: String // ''
 	let cents: Int // number of cents
 	let description: String
 	let createdAt: Date
@@ -25,8 +26,9 @@ struct Transaction {
 	init(json: JSON) {
 		let lenderUsername = json["lender"].stringValue
 		let debtorUsername = json["debtor"].stringValue
+		self.lender = lenderUsername
+		self.debtor = debtorUsername
 		
-		// TODO: use login lmao he's gonna get rid of the password
 		
 		self.cents = json["quantity"].intValue
 		
@@ -41,8 +43,6 @@ struct Transaction {
 		
 		self.interest = json["interest"].doubleValue
 		self.id = json["id"].stringValue
-		self.lender = nil
-		self.debtor = nil // TODO: FIX THIS SHITTY SHIT
 		self.status = Status(rawValue: json["status"].intValue)!
 		
 		if json["datePaid"].exists() {
