@@ -14,8 +14,18 @@ class FriendTableViewCell: UITableViewCell {
 	@IBOutlet weak var nameLabel: UILabel!
 	@IBOutlet weak var currentDebtLabel: UILabel!
 	@IBOutlet weak var usernameLabel: UILabel!
-	
-	
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
+        self.commonInit()
+        
+    }
+    
+    func commonInit() {
+        print("here?")
+        self.backgroundColor = UIColor.clear
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

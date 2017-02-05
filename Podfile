@@ -8,5 +8,5 @@ target 'LAHApp' do
   # Pods for LAHApp
   pod 'SwiftyJSON'
   pod 'Alamofire'
-
+  pod "Hero"
 end
