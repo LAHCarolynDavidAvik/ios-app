@@ -15,8 +15,8 @@ class PendingTableViewCell: UITableViewCell {
 	weak var pendingVC: PendingTableViewController?
 	
 	var t: Transaction?
-	@IBOutlet weak var fullNameLabel: UILabel! // lender
-	@IBOutlet weak var contextLabel: UILabel! // "lent you (amount). pay back by (deadline).
+	@IBOutlet weak var fullNameLabel: PrimaryLabel! // lender
+	@IBOutlet weak var contextLabel: DefaultLabel! // "lent you (amount). pay back by (deadline).
 	
 	
 	@IBAction func confirmPressed(_ sender: UIButton) {
@@ -38,7 +38,12 @@ class PendingTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        self.backgroundColor = UIColor.clear;
+        let myBackView = UIView(frame: self.frame);
+        myBackView.backgroundColor = UIColor(white: 1, alpha: 0.05);
+        self.selectedBackgroundView = myBackView;
+        self.fullNameLabel.setFontSize(size: 20)
+        self.contextLabel.setFontSize(size: 14)
         // Configure the view for the selected state
     }
 

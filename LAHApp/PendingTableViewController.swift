@@ -18,7 +18,10 @@ class PendingTableViewController: UITableViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = Color.Background;
+        self.view.tintColor = Color.White;
+        self.tableView.backgroundColor = UIColor.clear
+        self.tableView.separatorStyle = .none
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
